@@ -1,0 +1,73 @@
+body {
+  background-color: #0da3e999;
+  color: #050000;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+a:link {
+  color: #ffa500;
+}
+a:visited {
+  color: #aa00ff;
+}
+a:hover {
+  color: #00ff00;
+}
+a:active {
+  color: #ff0000;
+}
+
+.teachers-students {
+  margin: 0 auto;
+  width: 50%;
+  border-collapse: collapse;
+}
+
+.teachers-students td {
+  padding: 10px;
+  border: 1px solid #000;
+  text-align: left;
+}
+
+.teachers-students tr:nth-child(1) td:nth-child(1) {
+  background-color: #FFD700;
+  color: #000000;
+}
+
+.teachers-students tr:nth-child(1) td:nth-child(2) {
+  background-color: #ADFF2F;
+  color: #1a237e;
+}
+
+.teachers-students tr:nth-child(2) td:nth-child(1) {
+  background-color: #87CEFA;
+  color: #b71c1c;
+}
+
+.teachers-students tr:nth-child(2) td:nth-child(2) {
+  background-color: #FFA07A;
+  color: #1b5e20;
+}
+
+.teachers-students ul {
+  margin: 6px 0 0 18px;
+  padding: 0;
+}
+
+.teachers-students strong {
+  display: block;
+  margin-bottom: 6px;
+}
