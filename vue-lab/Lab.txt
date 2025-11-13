@@ -1,0 +1,28 @@
+Lab.txt
+
+1. Виконані кроки:
+
+Створив новий проєкт за допомогою команди (npm create vue@latest vue-lab) та обрав опції: TypeScript, Vue Router, ESLint, Prettier.
+Перейшов у папку проєкту (cd vue-lab) та встановив залежності (npm install).
+Запустив локальний сервер командою (npm run dev) і переконався, що стартова сторінка працює.
+Ознайомився зі структурою проєкту та роллю основних файлів: main.ts, router/index.ts, App.vue, папок views/ і components/.
+Створив нову сторінку ContactView.vue у папці src/views/.
+Додав новий маршрут /contact у файл src/router/index.ts.
+Додав посилання на нову сторінку в меню навігації у App.vue.
+Створив компонент UserCard.vue із типізованими пропсами за допомогою TypeScript.
+Імпортував компонент і використав його на сторінці ContactView.vue.
+Перевірив роботу TypeScript, створивши помилку.
+
+2. Текст помилки (приклад у коментарі в ContactView.vue):
+
+Помилка при спробі передати число замість boolean у пропсі isActive:
+
+// [Vue warn]: Invalid prop: type check failed for prop "isActive". 
+// Expected Boolean, got Number with value 1.
+// at <UserCard username="Student_3" isActive=1 >
+// at <ContactView>
+// at <RouterView>
+// at <App>
+
+3. Висновки:
+   TypeScript допомагає уникати помилок у коді завдяки статичній типізації та підказкам редактора. Це робить проєкт більш надійним. Vue Router дає можливість створювати SPA, забезпечує плавну навігацію без перезавантаження сторінки та структурує застосунок.
