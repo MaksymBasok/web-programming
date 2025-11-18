@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.phone {
+  @apply w-[min(380px,100vw)] h-[min(820px,100vh)] bg-bg border border-gray-200 
+         rounded-phone flex flex-col p-7 pt-7 pb-5 gap-20;
+}
+
+.btn {
+  @apply font-bold text-sm rounded-lg px-4 py-3 inline-block text-center;
+}
+.btn-primary {
+  @apply bg-primary text-white;
+}
+.btn-secondary {
+  @apply bg-chip text-gray-600;
+}
+
+.cta {
+  @apply bg-primary text-white font-bold text-lg px-6 py-3 rounded-xl;
+}
+
+.dot {
+  @apply w-2 h-2 rounded-sm bg-gray-300;
+}
+.dot-active {
+  @apply w-2.5 h-2.5 bg-primary;
+}
+
+.auth-screen {
+  @apply w-[min(380px,100vw)] h-[min(820px,100vh)] bg-primary rounded-phone 
+         p-10 flex flex-col items-center text-white gap-7;
+}
+
+.auth-input {
+  @apply p-4 bg-white text-gray-800 rounded-xl border-0 w-full text-sm;
+}
+
+.btn-auth {
+  @apply bg-white text-primary font-bold py-3 rounded-xl;
+}
+
+.tab {
+  @apply px-6 py-3 rounded-lg font-bold text-white bg-white/20;
+}
+.tab-active {
+  @apply bg-white text-primary;
+}

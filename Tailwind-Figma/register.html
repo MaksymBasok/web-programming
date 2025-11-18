@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="output.css" rel="stylesheet">
+  <title>Register</title>
+</head>
+<body class="flex items-center justify-center bg-gray-100 h-screen font-ui">
+
+<div class="auth-screen">
+
+  <div class="flex flex-col items-center gap-3">
+    <img src="img/heart.png" class="w-24">
+    <div class="text-4xl font-bold tracking-[2px]">FATED</div>
+  </div>
+
+  <div class="flex gap-3">
+    <a class="tab" href="login.html">LOGIN</a>
+    <a class="tab tab-active" href="register.html">REGISTER</a>
+  </div>
+
+  <form class="flex flex-col gap-4 w-full">
+    <input class="auth-input" placeholder="user name">
+    <input class="auth-input" type="password" placeholder="password">
+    <input class="auth-input" type="email" placeholder="email">
+    <button class="btn-auth">REGISTER</button>
+  </form>
+
+  <div class="mt-auto flex gap-2 text-xs opacity-90">
+    <span>ALREADY HAVE AN ACCOUNT?</span>
+    <a href="login.html" class="font-bold">LOGIN</a>
+  </div>
+
+</div>
+
+</body>
+</html>

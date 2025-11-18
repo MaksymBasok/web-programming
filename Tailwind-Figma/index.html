@@ -1,40 +1,44 @@
 <!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="output.css" rel="stylesheet">
   <title>Onboarding</title>
-  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
-  <div class="phone">
-    <div class="art">
-      <img src="img/image1.png" alt="Illustration">
-    </div>
+<body class="flex items-center justify-center h-screen bg-gray-100 font-ui">
 
-    <div class="content">
-      <div class="cta">MEET NEW PEOPLE</div>
-      <p class="desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+<div class="phone">
+
+  <div class="flex flex-1 items-center justify-center">
+    <img src="img/image1.png" class="w-full max-w-xs" />
+  </div>
+
+  <div class="flex flex-col items-center gap-3 text-center">
+    <div class="cta">MEET NEW PEOPLE</div>
+    <p class="text-muted text-xs leading-5 max-w-[310px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
  lacinia tellus quis est pharetra fermentum. Curabitur dapibus.
  neque id lacus hendrerit rhoncus. Vivamus quis pretium metus.
 Praesent varius tortor sit amet quam eleifend hendrerit.
 Vivamus pharetra ultrices diam vel volutpat. Praesent molestie
 lobortis sodales. Sed volutpat tempus orci
-      </p>
-    </div>
-
-    <div class="footer">
-      <button class="btn secondary">SKIP</button>
-
-      <div class="dots" aria-label="pagination">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-
-      <button class="btn primary">NEXT</button>
-    </div>
+    </p>
   </div>
+
+  <div class="flex items-center justify-between mt-auto gap-3">
+    <a class="btn btn-secondary">SKIP</a>
+
+    <div class="flex gap-4">
+      <span class="dot dot-active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <a href="onboarding-2.html" class="btn btn-primary">NEXT</a>
+  </div>
+
+</div>
+
 </body>
 </html>
