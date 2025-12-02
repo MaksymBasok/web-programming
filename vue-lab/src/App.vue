@@ -1,85 +1,56 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { ref, onMounted } from 'vue'
+
+const isDark = ref(false)
+
+onMounted(() => {
+  const saved = localStorage.getItem("theme")
+  if (saved === "dark") {
+    isDark.value = true
+    document.documentElement.classList.add("dark")
+  }
+})
+
+function toggleTheme() {
+  isDark.value = !isDark.value
+
+  if (isDark.value) {
+    document.documentElement.classList.add("dark")
+    localStorage.setItem("theme", "dark")
+  } else {
+    document.documentElement.classList.remove("dark")
+    localStorage.setItem("theme", "light")
+  }
+}
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <div class="max-w-4xl mx-auto">
+      <nav
+        class="p-4 bg-gray-100 dark:bg-gray-900 dark:text-gray-100
+               rounded-b-lg shadow-md flex justify-between items-center transition-colors"
+      >
+        <div class="flex gap-4">
+          <RouterLink class="hover:underline" to="/">Home</RouterLink>
+          <RouterLink class="hover:underline" to="/about">About</RouterLink>
+          <RouterLink class="hover:underline" to="/contact">Contact</RouterLink>
+        </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-  <RouterLink to="/">Home</RouterLink>
-  <RouterLink to="/about">About</RouterLink>
-  <RouterLink to="/contact">Contact</RouterLink> </nav>
+        <!-- Кнопка перемикача теми -->
+        <button
+          @click="toggleTheme"
+          class="px-3 py-1 rounded bg-gray-300 dark:bg-gray-700 dark:text-white
+                 hover:bg-gray-400 dark:hover:bg-gray-600 transition"
+        >
+          {{ isDark ? "Light" : "Dark" }}
+        </button>
+      </nav>
     </div>
   </header>
 
-  <RouterView />
+  <main class="max-w-4xl mx-auto mt-5">
+    <RouterView />
+  </main>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>

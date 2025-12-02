@@ -17,7 +17,7 @@ Lab.txt
 
 Помилка при спробі передати число замість boolean у пропсі isActive:
 
-// [Vue warn]: Invalid prop: type check failed for prop "isActive". 
+// [Vue warn]: Invalid prop: type check failed for prop "isActive".
 // Expected Boolean, got Number with value 1.
 // at <UserCard username="Student_3" isActive=1 >
 // at <ContactView>
